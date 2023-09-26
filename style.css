@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ecf4fb;
+    display: flex;
+    justify-content: center;
+    
+}
+.gallery-title {
+    text-align: center; /* Center the text horizontally */
+    padding: 20px 0; /* Add some padding for spacing */
+    font-size: 24px; /* Adjust the font size as needed */
+    height: 50px;
+}
+
+.img-gallery {
+    width: 80%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    justify-content: center;
+    
+    
+}
+
+img{
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+}
+
+.img-gallery>img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.img-gallery>img{
+    transition: transform 0.3s ease-in-out;
+}
+
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+}
+
+.full-img>img{
+    width: 90%;
+    max-width: 500px;
+    height: 50vh;
+}
+
+.full-img>span{
+    position: absolute;
+    font-size: 40px;
+    top: 5%;
+    right: 5%;
+    color: white;
+    cursor: pointer;
+}
+.button1{
+    font-size: 20px;
+    width: 25px;
+    position: absolute;
+    bottom: 29%;
+    right: 32%;
+    cursor: pointer;
+    
+}
+.button2{
+    font-size: 20px;
+    width: 25px;
+    position: absolute;
+    bottom: 25.4%;
+    right: 32%;
+    cursor: pointer;
+    
+}
+
+#fullImg{
+    border-radius: 20px;
+}
